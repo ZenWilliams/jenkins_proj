@@ -1,10 +1,20 @@
-#!/usr/bin/env groovy
-
 pipeline {
   agent any
   stages {
-    step {
-      echo 'Hello World from SC GitHub'
+    stage("build") {
+      steps {
+        echo "Building the application..."
+      }
+    }
+    stage("test") {
+      steps {
+        echo "Testing the application...."
+      }
+    }
+    stage("deploy") {
+      steps {
+        echo "Deploying the application...."
+      }
     }
   }
 }
